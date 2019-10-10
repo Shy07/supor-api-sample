@@ -1,0 +1,17 @@
+{
+  "port": 8089,
+  "tokenSecret": "your secret key for generate token",
+  "redisService": {
+    "port": 6379,
+    "host": "localhost",
+    "keyPrefix": "yunbu-fe:",
+    "options": {}
+  },
+  "mongoService": {
+    "type": "mongodb",
+    "database": "test"
+  },
+  "loggerService": {
+    "filename": "./log/winston.log"
+  }
+}

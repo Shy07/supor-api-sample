@@ -1,0 +1,21 @@
+@baseUrl = http://192.168.30.156:8089
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOjEyMzQ1LCJpYXQiOjE1Njk0NzkwNTcxNzksImV4cCI6MTU3MDA4Mzg1NzE3OX0.9mzrfFsk_XBb6zHuelxnvUkXGe6QOw3kB4otZFCtuCY
+
+###
+POST {{baseUrl}}/token
+Content-Type: application/json
+x-use-camel: true
+
+{
+  "mobile": "12345"
+}
+
+###
+GET {{baseUrl}}/products
+Authorization: token {{token}}
+x-use-camel: true
+
+###
+GET {{baseUrl}}/me
+Authorization: token {{token}}
+x-use-camel: true
